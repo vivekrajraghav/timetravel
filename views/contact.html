@@ -1,41 +1,203 @@
-extends base.pug
-block script  
-block style 
-    style
-        include contact.css
-block content
-    div#reach
-        div#contact
-            h2 Book an Appointment
-            form(action="/contact" method="post") 
-                input(id="name" name="name" type="text" placeholder='Your Name')
-                br
-                input(id="phone" name="phone" type="phone" placeholder='Your Mobile no.')
-                br
-                input(id="email" name="email" type="email" placeholder="Your email")
-                br
-                input(id="location" name="location" type="text" placeholder="Enter your destination")
-                br
-                button.btn(type="submit") Sumbit 
-                button.btn(type="reset") Reset
-                //- div#message
-                //-     div#send
-                //-         |Your Appointment request has been successfully submitted!
-                //-     div#danger
-                //-         |Form is Empty
-        div#number 
-                h2#head2 Reach Us
-                div#flex2
-                    div.box        
+<!DOCTYPE html>
+<html>
 
-                        img(src="../static/img/contact/phone.png", alt="")
-                        span #[strong Phone:- +91-1234567890]
-                    div.box        
-                        img(src="../static/img/contact/mail.png", alt="")
-                        span #[strong Mail:- tripwithus@timetravel.com]
-                    div.box        
-                        img(src="../static/img/contact/fax.png", alt="")
-                        span #[strong Fax:- 555-123-4567]
-                    div.box        
-                        img(src="../static/img/contact/office.png", alt="")
-                        span #[strong Office:- Janakpuri, Delhi]
+<head>
+    <title>Time Travel </title>
+    <style>
+        #reach {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-left: 33px;
+            margin-top: 15px;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        form {
+            margin: 15px 20px;
+        }
+
+        #contact input {
+            color: orangered;
+            font-family: 'Baloo 2', cursive;
+            width: 200px;
+            padding: 10px;
+            margin: 4px 8px;
+            border: solid 2px black;
+            border-radius: 12px;
+
+        }
+
+        .btn {
+            height: 25px;
+            width: 60px;
+            border-radius: 12px;
+            border: solid 2px black;
+            background-color: rgba(255, 166, 0, 0.4);
+            margin: 10px 20px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            height: 120px;
+            margin: 20px;
+
+
+        }
+
+        .box img {
+            height: 100px;
+
+        }
+
+        #flex2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+        }
+
+        .box span {
+            font-size: 10px;
+        }
+
+        #head2 {
+            text-align: center;
+        }
+
+        #danger {
+            color: red;
+            font-family: 'Baloo 2', cursive;
+            margin-left: 48px;
+
+        }
+
+        #send {
+            color: green;
+            font-family: 'Baloo 2', cursive;
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #navbar {
+            display: flex;
+            font-size: 2rem;
+            justify-content: space-around;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            height: 60px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: orangered;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: opacity(80%);
+
+        }
+
+
+        #logo img {
+            height: 50px;
+            filter: invert(1);
+            margin-top: 5px;
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar li a {
+            font-family: 'Yeon Sung', cursive;
+            color: white;
+            text-decoration: none;
+            padding: 6px 6px;
+        }
+
+        #navbar li {
+            list-style: none;
+            margin: 10px 10px;
+        }
+
+        #navbar li:hover {
+            text-decoration: underline;
+            background-color: orange;
+            border-radius: 12px;
+
+        }
+
+        #foot {
+            font-family: 'Yeon Sung', cursive;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 6px 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo"><a href="/"><img src="/static/img/base/logo.png" alt="logo"></a></div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/trip">Trips</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+</body>
+<div id="reach">
+    <div id="contact">
+        <h2>Book an Appointment</h2>
+        <form action="/contact" method="post"> <input id="name" name="name" type="text"
+                placeholder="Your Name"><br><input id="phone" name="phone" type="phone"
+                placeholder="Your Mobile no."><br><input id="email" name="email" type="email"
+                placeholder="Your email"><br><input id="location" name="location" type="text"
+                placeholder="Enter your destination"><br><button class="btn" type="submit">Sumbit </button><button
+                class="btn" type="reset">Reset</button></form>
+    </div>
+    <div id="number">
+        <h2 id="head2">Reach Us</h2>
+        <div id="flex2">
+            <div class="box"> <img src="../static/img/contact/phone.png" alt=""><span><strong>Phone:-
+                        +91-1234567890</strong></span></div>
+            <div class="box"> <img src="../static/img/contact/mail.png" alt=""><span><strong>Mail:-
+                        tripwithus@timetravel.com</strong></span></div>
+            <div class="box"> <img src="../static/img/contact/fax.png" alt=""><span><strong>Fax:-
+                        555-123-4567</strong></span></div>
+            <div class="box"> <img src="../static/img/contact/office.png" alt=""><span><strong>Office:- Janakpuri,
+                        Delhi</strong></span></div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="foot"> <strong>Copyright © 2022 www.timetravel.com | All rights reserves</strong></div>
+</footer>
+
+</html>

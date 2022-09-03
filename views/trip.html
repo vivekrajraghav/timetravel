@@ -1,34 +1,245 @@
-extends base.pug
-block script 
-block style 
-    style
-        include trip.css
-block content        
-    div#container
-        h1 Trips:Full Coverage
-        div#trip
-            div.box#trip1
-                span.head World Trip
-            div.box#trip2
-                span.head HoneyMoon Trip 
-            div.box#trip3
-                span.head Holiday Trip
-            div.box#trip4
-                span.head Adventure Trip
-            .box#trip5 
-                span.head Heritage Trip
-            div.box#trip6
-                span.head Hill Station Trip 
-            div.box#trip7
-                span.head Solo Trip
-            div.box#trip8
-                span.head Family Trip
-            div.box#trip9
-                span.head Beach Trip
-    div#coverage
-        h2 All type of trip options are available:-
-        ul 
-            li Traveling  
-            li Traveling with Guide
-            li Traveling + Night stay
-            li Full Trip coverage #[span (Inludes all things)]
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Time Travel </title>
+    <style>
+        #trip {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 15px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            font-family: 'Baloo 2', cursive;
+            padding: 5px 8px;
+            text-align: end;
+            border-top-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+            margin: 10px;
+            border: solid rgba(0, 0, 0, 1) 2px;
+            height: 120px;
+            width: 40vh;
+
+        }
+
+        .box:hover {
+            box-shadow: 0px 0px 5px 5px rgba(255, 68, 0, 0.7);
+        }
+
+        #container {
+            border-radius: 20px;
+            margin: 25px;
+            background-color: rgb(178, 210, 210);
+        }
+
+        #container h1 {
+            padding: 0px 65px;
+            padding-top: 40px;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        #trip1 {
+            background: url('../static/img/trips/world.jpg') no-repeat center center/cover;
+            height: 120px;
+            width: 40vh;
+        }
+
+        #trip2 {
+            background: url('../static/img/trips/honey.jpg') no-repeat center center/cover;
+            height: 120px;
+            width: 40vh;
+        }
+
+        #trip3 {
+            background: url('../static/img/trips/holiday.jpg') no-repeat center center/cover;
+            height: 120px;
+            width: 40vh;
+        }
+
+        #trip4 {
+            background: url('../static/img/trips/adventure.jpg') no-repeat center center/cover;
+            height: 120px;
+            width: 40vh;
+        }
+
+        #trip5 {
+            background: url('../static/img/trips/heritage.jpg') no-repeat center center/cover;
+            height: 120px;
+            width: 40vh;
+        }
+
+        #trip6 {
+            background: url('../static/img/trips/hill.jpg') no-repeat center center/cover;
+            height: 120px;
+            width: 40vh;
+        }
+
+        #trip7 {
+            background: url('../static/img/trips/solo.jpg') no-repeat center center/cover;
+            height: 120px;
+            width: 40vh;
+        }
+
+        #trip8 {
+            background: url('../static/img/trips/family.jpg') no-repeat center center/cover;
+            height: 120px;
+            width: 40vh;
+        }
+
+        #trip9 {
+            background: url('../static/img/trips/beach.jpg') no-repeat center center/cover;
+            height: 120px;
+            width: 40vh;
+        }
+
+        .head {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+            border-radius: 8px;
+            padding: 2px 2px;
+        }
+
+        #coverage {
+            margin: 25px;
+            color: black;
+            background-color: rgba(255, 166, 0, 0.4);
+            padding: 15px 35px;
+            border-radius: 15px;
+
+        }
+
+        #coverage ul {
+            padding-left: 15px;
+        }
+
+        #coverage li {
+            list-style: circle;
+            font-family: 'Baloo 2', cursive;
+
+        }
+
+        #coverage h2 {
+            font-family: 'Yeon Sung', cursive;
+
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #navbar {
+            display: flex;
+            font-size: 2rem;
+            justify-content: space-around;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            height: 60px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: orangered;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: opacity(80%);
+
+        }
+
+
+        #logo img {
+            height: 50px;
+            filter: invert(1);
+            margin-top: 5px;
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar li a {
+            font-family: 'Yeon Sung', cursive;
+            color: white;
+            text-decoration: none;
+            padding: 6px 6px;
+        }
+
+        #navbar li {
+            list-style: none;
+            margin: 10px 10px;
+        }
+
+        #navbar li:hover {
+            text-decoration: underline;
+            background-color: orange;
+            border-radius: 12px;
+
+        }
+
+        #foot {
+            font-family: 'Yeon Sung', cursive;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 6px 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo"><a href="/"><img src="/static/img/base/logo.png" alt="logo"></a></div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/trip">Trips</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+</body>
+<div id="container">
+    <h1>Trips:Full Coverage</h1>
+    <div id="trip">
+        <div class="box" id="trip1"><span class="head">World Trip</span></div>
+        <div class="box" id="trip2"><span class="head">HoneyMoon Trip </span></div>
+        <div class="box" id="trip3"><span class="head">Holiday Trip</span></div>
+        <div class="box" id="trip4"><span class="head">Adventure Trip</span></div>
+        <div class="box" id="trip5"> <span class="head">Heritage Trip</span></div>
+        <div class="box" id="trip6"><span class="head">Hill Station Trip </span></div>
+        <div class="box" id="trip7"><span class="head">Solo Trip</span></div>
+        <div class="box" id="trip8"><span class="head">Family Trip</span></div>
+        <div class="box" id="trip9"><span class="head">Beach Trip</span></div>
+    </div>
+</div>
+<div id="coverage">
+    <h2>All type of trip options are available:-</h2>
+    <ul>
+        <li>Traveling </li>
+        <li>Traveling with Guide</li>
+        <li>Traveling + Night stay</li>
+        <li>Full Trip coverage <span>(Inludes all things)</span></li>
+    </ul>
+</div>
+<footer>
+    <div id="foot"> <strong>Copyright © 2022 www.timetravel.com | All rights reserves</strong></div>
+</footer>
+
+</html>
