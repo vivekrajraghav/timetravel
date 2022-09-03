@@ -1,0 +1,26 @@
+doctype html
+html
+    head 
+        title Time Travel 
+        block script       
+        block style 
+        style 
+            include base.css 
+   
+
+
+    body 
+        nav#navbar
+            div#logo
+                a(href="/")
+                    img(src="/static/img/base/logo.png", alt="logo")           
+            ul
+                li #[a(href='/') Home]
+                li #[a(href='/trip') Trips]
+                li #[a(href='/services') Services]
+                li #[a(href='/contact') Contact]
+                li #[a(href='/about') About]
+    block content        
+    footer
+        div#foot           
+            strong Copyright © 2022 www.timetravel.com | All rights reserves

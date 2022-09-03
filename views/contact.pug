@@ -1,0 +1,41 @@
+extends base.pug
+block script  
+block style 
+    style
+        include contact.css
+block content
+    div#reach
+        div#contact
+            h2 Book an Appointment
+            form(action="/contact" method="post") 
+                input(id="name" name="name" type="text" placeholder='Your Name')
+                br
+                input(id="phone" name="phone" type="phone" placeholder='Your Mobile no.')
+                br
+                input(id="email" name="email" type="email" placeholder="Your email")
+                br
+                input(id="location" name="location" type="text" placeholder="Enter your destination")
+                br
+                button.btn(type="submit") Sumbit 
+                button.btn(type="reset") Reset
+                //- div#message
+                //-     div#send
+                //-         |Your Appointment request has been successfully submitted!
+                //-     div#danger
+                //-         |Form is Empty
+        div#number 
+                h2#head2 Reach Us
+                div#flex2
+                    div.box        
+
+                        img(src="../static/img/contact/phone.png", alt="")
+                        span #[strong Phone:- +91-1234567890]
+                    div.box        
+                        img(src="../static/img/contact/mail.png", alt="")
+                        span #[strong Mail:- tripwithus@timetravel.com]
+                    div.box        
+                        img(src="../static/img/contact/fax.png", alt="")
+                        span #[strong Fax:- 555-123-4567]
+                    div.box        
+                        img(src="../static/img/contact/office.png", alt="")
+                        span #[strong Office:- Janakpuri, Delhi]

@@ -1,0 +1,22 @@
+extends base.pug
+block script  
+block style 
+    style 
+        include home.css
+block content        
+    div#container
+        h1.head1 Time Travel
+        p Dare to Live! The Life   #[br] You've Always Wanted!
+        a(href="/services") #[button#btn Get Tickets Now!]
+    div#offer
+        h2.head2 Collections 
+        div#services
+            a(href='/trip')
+                div.box#box1
+                    h3.head3 Internation Destination
+            a(href='/trip')
+                div.box#box2
+                    h3.head3 National Destination
+            a(href='/trip')
+                div.box#box3
+                    h3.head3 Special Requests

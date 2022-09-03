@@ -1,0 +1,70 @@
+#reach{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+h2 {
+    font-size: 1.2rem;
+    margin-left: 33px;
+    margin-top: 15px;
+    font-family: 'Baloo 2', cursive;
+}
+
+form {
+    margin: 15px 20px;
+}
+
+#contact input {
+    color: orangered;
+    font-family: 'Baloo 2', cursive;
+    width: 200px;
+    padding: 10px;
+    margin: 4px 8px;
+    border: solid 2px black;
+    border-radius: 12px;
+
+}
+
+.btn {
+    height: 25px;
+    width: 60px;
+    border-radius: 12px;
+    border: solid 2px black;
+    background-color: rgba(255, 166, 0, 0.4);
+    margin: 10px 20px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    margin: 20px;
+    
+
+}
+.box img{
+    height: 100px;
+
+}
+#flex2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.box span{
+    font-size: 10px;
+}
+#head2{
+    text-align: center;
+}
+#danger{
+    color: red;
+    font-family: 'Baloo 2',cursive;
+    margin-left: 48px;
+
+}
+#send{
+    color: green;
+    font-family: 'Baloo 2',cursive;
+}
