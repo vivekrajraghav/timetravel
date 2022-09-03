@@ -22,7 +22,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: url('../static/img/home/homebg.jpg') no-repeat center center/cover;
+            background: url('./static/img/home/homebg.jpg') no-repeat center center/cover;
             height: 100%;
             width: 100%;
             z-index: -1;
@@ -94,15 +94,15 @@
 
         #box1 {
             /* padding-top: 2px; */
-            background: url("../static/img/home/inter.jpg") no-repeat center center/cover;
+            background: url("./static/img/home/inter.jpg") no-repeat center center/cover;
         }
 
         #box2 {
-            background: url("../static/img/home/dom.jpg") no-repeat center center/cover;
+            background: url("./static/img/home/dom.jpg") no-repeat center center/cover;
         }
 
         #box3 {
-            background: url("../static/img/home/req.jpg") no-repeat center center/cover;
+            background: url("./static/img/home/req.jpg") no-repeat center center/cover;
         }
     </style>
     <style>
@@ -184,32 +184,32 @@
 
 <body>
     <nav id="navbar">
-        <div id="logo"><a href="/"><img src="/static/img/base/logo.png" alt="logo"></a></div>
+        <div id="logo"><a href="/"><img src="./static/img/base/logo.png" alt="logo"></a></div>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/trip">Trips</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/timetravel">Home</a></li>
+            <li><a href="./views/trip.html">Trips</a></li>
+            <li><a href="./views/services.html">Services</a></li>
+            <li><a href="./views/contact.html">Contact</a></li>
+            <li><a href="./views/about.html">About</a></li>
         </ul>
     </nav>
 </body>
 <div id="container">
     <h1 class="head1">Time Travel</h1>
-    <p>Dare to Live! The Life <br> You've Always Wanted!</p><a href="/services"><button id="btn">Get Tickets
+    <p>Dare to Live! The Life <br> You've Always Wanted!</p><a href="./views/services.html"><button id="btn">Get Tickets
             Now!</button></a>
 </div>
 <div id="offer">
     <h2 class="head2">Collections </h2>
-    <div id="services"><a href="/trip">
+    <div id="services"><a href="./views/trip.html">
             <div class="box" id="box1">
                 <h3 class="head3">Internation Destination</h3>
             </div>
-        </a><a href="/trip">
+        </a><a href="./views/trip.html">
             <div class="box" id="box2">
                 <h3 class="head3">National Destination</h3>
             </div>
-        </a><a href="/trip">
+        </a><a href="./views/trip.html">
             <div class="box" id="box3">
                 <h3 class="head3">Special Requests</h3>
             </div>
