@@ -10,32 +10,32 @@ const port = 80;
 app.use('/static', express.static('static'))
 
 app.get('/', (req, res) => {
-    res.render('home.html', {
+    res.render('index.html', {
         title: "Time Travelling"
     })
 })
 app.get('/trip', (req, res) => {
-    res.render('trip.html', {
+    res.render('./views/trip.html', {
         title: "Trips"
     })
 })
 app.get('/services', (req, res) => {
-    res.render('services.html', {
+    res.render('./views/services.html', {
         title: "Services"
     })
 })
 
 app.get('/contact', (req, res) => {
-    res.render('contact.html', {
+    res.render('./views/contact.html', {
         title: "Contact Us"
     })
 })
 app.get('/about', (req, res) => {
-    res.render('about.html', {
+    res.render('./views/about.html', {
         title: "About Us"
     })
 })
-app.post('/contact', (req, res) => {
+app.post('./views/contact', (req, res) => {
     res.send('Your appointment has been booked')
 })
 //Listening at port
