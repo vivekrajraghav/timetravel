@@ -12,47 +12,49 @@
         }
 
         h2 {
-            font-size: 1.2rem;
-            margin-left: 33px;
-            margin-top: 15px;
+            font-size: 2.4rem;
+            margin-left: 66px;
+            margin-top: 30px;
             font-family: 'Baloo 2', cursive;
         }
 
         form {
-            margin: 15px 20px;
+            margin: 30px 40px;
         }
 
         #contact input {
+            font-size: 1.5rem;
             color: orangered;
             font-family: 'Baloo 2', cursive;
-            width: 200px;
-            padding: 10px;
-            margin: 4px 8px;
-            border: solid 2px black;
-            border-radius: 12px;
+            width: 400px;
+            padding: 20px;
+            margin: 8px 16px;
+            border: solid 4px black;
+            border-radius: 24px;
 
         }
 
         .btn {
-            height: 25px;
-            width: 60px;
-            border-radius: 12px;
-            border: solid 2px black;
+            height: 50px;
+            width: 120px;
+            border-radius: 24px;
+            border: solid 4px black;
             background-color: rgba(255, 166, 0, 0.4);
-            margin: 10px 20px;
+            margin: 20px 40px;
+            font-size: 1.5rem;
         }
 
         .box {
             display: flex;
             flex-direction: column;
-            height: 120px;
-            margin: 20px;
+            height: 240px;
+            margin: 40px;
 
 
         }
 
         .box img {
-            height: 100px;
+            height: 200px;
 
         }
 
@@ -64,23 +66,11 @@
         }
 
         .box span {
-            font-size: 10px;
+            font-size: 20px;
         }
 
         #head2 {
             text-align: center;
-        }
-
-        #danger {
-            color: red;
-            font-family: 'Baloo 2', cursive;
-            margin-left: 48px;
-
-        }
-
-        #send {
-            color: green;
-            font-family: 'Baloo 2', cursive;
         }
     </style>
     <style>
@@ -97,12 +87,12 @@
 
         #navbar {
             display: flex;
-            font-size: 2rem;
+            font-size: 4rem;
             justify-content: space-around;
             position: sticky;
             top: 0px;
             left: 0px;
-            height: 60px;
+            height: 120px;
         }
 
         #navbar::before {
@@ -120,9 +110,9 @@
 
 
         #logo img {
-            height: 50px;
+            height: 100px;
             filter: invert(1);
-            margin-top: 5px;
+            margin-top: 10px;
 
         }
 
@@ -135,18 +125,18 @@
             font-family: 'Yeon Sung', cursive;
             color: white;
             text-decoration: none;
-            padding: 6px 6px;
+            padding: 12px 12px;
         }
 
         #navbar li {
             list-style: none;
-            margin: 10px 10px;
+            margin: 20px 20px;
         }
 
         #navbar li:hover {
             text-decoration: underline;
             background-color: orange;
-            border-radius: 12px;
+            border-radius: 24px;
 
         }
 
@@ -155,22 +145,21 @@
             background-color: black;
             color: white;
             text-align: center;
-            padding: 6px 6px;
+            padding: 12px 12px;
         }
     </style>
 </head>
 
-<body>
-    <nav id="navbar">
-        <div id="logo"><a href="/timetravel"><img src="../static/img/base/logo.png" alt="logo"></a></div>
-        <ul>
-            <li><a href="/timetravel">Home</a></li>
-            <li><a href="trip.html">Trips</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
+<nav id="navbar">
+    <div id="logo"><a href="/timetravel"><img src="../static/img/base/logo.png" alt="logo"></a></div>
+    <ul>
+        <li><a href="/timetravel">Home</a></li>
+        <li><a href="trip.html">Trips</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
 </body>
 <div id="reach">
     <div id="contact">
@@ -201,3 +190,5 @@
 </footer>
 
 </html>
+
+<body>
