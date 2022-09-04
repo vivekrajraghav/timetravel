@@ -23,19 +23,31 @@
             margin: 30px 40px;
         }
 
-        #contact input {
-            font-size: 1.5rem;
-            color: orangered;
-            font-family: 'Baloo 2', cursive;
+        .icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 2rem;
+            color: black;
             width: 400px;
             padding: 20px;
             margin: 8px 16px;
-            border: solid 4px black;
-            border-radius: 24px;
+            border: solid 2px black;
+            border-radius: 16px;
+
+        }
+
+        .icons input {
+
+            font-size: 1.2rem;
+            border: none;
+            outline: none;
+            font-family: 'Baloo 2', cursive;
 
         }
 
         .btn {
+            font-family: 'Yeon Sung', cursive;
             height: 50px;
             width: 120px;
             border-radius: 24px;
@@ -44,6 +56,7 @@
             margin: 20px 40px;
             font-size: 1.5rem;
         }
+
 
         .box {
             display: flex;
@@ -165,12 +178,25 @@
 <div id="reach">
     <div id="contact">
         <h2>Book an Appointment</h2>
-        <form action="contact.html" method="post"> <input id="name" name="name" type="text"
-                placeholder="Your Name"><br><input id="phone" name="phone" type="phone"
-                placeholder="Your Mobile no."><br><input id="email" name="email" type="email"
-                placeholder="Your email"><br><input id="location" name="location" type="text"
-                placeholder="Enter your destination"><br><button class="btn" type="submit">Sumbit </button><button
-                class="btn" type="reset">Reset</button></form>
+        <form action="contact.html" method="post" autocomplete="off">
+            <div class="icons">
+                <ion-icon name="person-outline"></ion-icon>
+                <input id="name" name="name" type="text" placeholder="Your Name" required>
+            </div><br>
+            <div class="icons">
+                <ion-icon name="call-outline"></ion-icon>
+                <input id="phone" name="phone" type="phone" placeholder="Your Mobile no." required maxlength="10">
+            </div> <br>
+            <div class="icons">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input id="email" name="email" type="email" placeholder="Your Email" required>
+            </div> <br>
+            <div class="icons">
+                <ion-icon name="compass-outline"></ion-icon>
+                <input id="location" name="location" type="text" placeholder="Enter your destination" required>
+            </div> <br>
+            <button class="btn" type="submit">Sumbit </button><button class="btn" type="reset">Reset</button>
+        </form>
     </div>
     <div id="number">
         <h2 id="head2">Reach Us</h2>
