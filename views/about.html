@@ -5,18 +5,21 @@
     <link rel="icon" href="../static/img/base/logo.png">
     <title>Time Travel </title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
         @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
 
         #container {
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: first baseline;
             align-items: center;
             background-color: lightgray;
         }
 
         #container h2 {
-            font-family: 'Baloo 2', cursive;
+            font-family: 'Ubuntu', sans-serif;
             padding: 20px 0px;
         }
 
@@ -101,6 +104,9 @@
             color: white;
             text-align: center;
             padding: 12px 12px;
+            position: fixed;
+            bottom: 0px;
+            width: 100vw;
         }
 
         @media screen and (max-width:1270px) {
@@ -119,7 +125,8 @@
 
             #navbar ul {
                 align-items: center;
-            }}
+            }
+        }
     </style>
 </head>
 
@@ -163,7 +170,8 @@
             status, instant fare drops, amazing discounts, instant refunds and rebook options, price comparisons and
             many
             more interesting features.
-        </span></div>
+        </span>
+    </div>
     <footer>
         <div id="foot"> <strong>Copyright © 2022 www.timetravel.com | All rights reserves</strong></div>
     </footer>
