@@ -9,307 +9,259 @@
     <link rel="icon" href="../static/img/base/logo.png">
     <link rel="icon" href="../static/img/base/logo.png">
     <title>Time Travel </title>
-    <style>
-        #reach {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+</head>
 
-        }
-
-        h2 {
-            font-size: 2.4rem;
-            margin-left: 66px;
-            margin-top: 30px;
-            font-family: 'Ubuntu', sans-serif;
-        }
-
-        form {
-            margin: 30px 40px;
-        }
-
-        .icons {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            font-size: 2rem;
-            color: black;
-            width: 400px;
-            padding: 20px;
-            margin: 8px 16px;
-            border: solid 2px black;
-            border-radius: 16px;
-
-        }
-
-        .icons input {
-
-            font-size: 1.2rem;
-            border: none;
-            outline: none;
-            font-family: 'Ubuntu', sans-serif;
-
-        }
-
-        .btn {
-            font-family: 'Ubuntu', sans-serif;
-            height: 50px;
-            width: 120px;
-            border-radius: 12px;
-            border: solid 4px black;
-            background-color: rgba(255, 166, 0, 0.4);
-            margin: 20px 40px;
-            font-size: 1.5rem;
-        }
-
-        .btn:hover {
-            background-color: rgba(255, 166, 0, 0.1);
-        }
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
 
 
-        .box {
-            display: flex;
-            flex-direction: column;
-            height: 240px;
-            margin: 40px;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #navbar {
+        display: flex;
+        font-size: 4rem;
+        justify-content: space-around;
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        height: 120px;
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: orangered;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        filter: opacity(80%);
+
+    }
 
 
-        }
+    #logo img {
+        height: 100px;
+        filter: invert(1);
+        margin-top: 10px;
 
-        .box img {
-            height: 200px;
+    }
 
-        }
+    #navbar ul {
+        display: flex;
 
-        #flex2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+    }
 
-        }
+    #navbar li a {
+        font-family: 'Yeon Sung', cursive;
+        color: white;
+        text-decoration: none;
+        padding: 12px 12px;
+    }
 
-        .box span {
-            font-size: 20px;
-        }
+    #navbar li {
+        list-style: none;
+        margin: 20px 20px;
+    }
 
-        #head2 {
-            text-align: center;
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+    #navbar li:hover {
+        text-decoration: underline;
+        background-color: orange;
+        border-radius: 24px;
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
+    }
 
-        html {
-            scroll-behavior: smooth;
+    #foot {
+        font-family: 'Yeon Sung', cursive;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 12px 12px;
+        position: fixed;
+        bottom: 0px;
+        width: 100vw;
+    }
 
-        }
+    /* Main body css starts here */
+    #container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid black 2px;
+        padding: 4px;
+        margin: 10px 0px;
+        margin-left: 45px;
+        border-radius: 12px;
+        font-size: 2rem;
+    }
+    .icons input{
+        font-size: 2rem;
+        margin-left: 20px;
+        outline: none;
+        border: none;
+        width: 500px;
+        height: 50px;
+    }
+    .btn{
+        border: solid 2px black;
+        background-color:antiquewhite;
+        border-radius: 12px;
+        font-size: 1.8rem;
+        height: 3rem;
+        width: 7rem;
+        margin: 10px 30px;
+        margin-left: 45px;
+    }
+    .btn:hover{
+        background-color: rgba(250, 235, 215, 0.5);
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    h2{
+        font-size: 3rem;
+        text-align: center;
+        font-family: 'Ubuntu', cursive;
+        margin-top: 52px;
+    }
+    #reach{
+        width: 45%;
+        margin-left: auto;
+    }
+    .chead{
+        margin-right: 80px;
+    }
+    #appoint{
+        margin-right: auto;
+        width: 45%;
+    }
+    #contact{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box{ display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 25px 30px;
+        height: 200px;
+        width: 250px;
 
-        body {
-            height: 100vh;
-        }
+    }
+    .box img{
+        height: 180px;
+        width: 250px;
+    }
 
+    @media screen and (max-width:1270px) {
+
+        /* Navbar Starts here */
         #navbar {
-            display: flex;
-            font-size: 4rem;
-            justify-content: space-around;
-            position: sticky;
-            top: 0px;
-            left: 0px;
+            font-size: 2.5rem;
             height: 120px;
         }
 
-        #navbar::before {
-            content: "";
-            background-color: orangered;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            filter: opacity(80%);
-
-        }
-
-
         #logo img {
-            height: 100px;
-            filter: invert(1);
-            margin-top: 10px;
+            height: 80px;
+            margin-top: 18px;
 
         }
 
         #navbar ul {
-            display: flex;
-
+            align-items: center;
         }
-
-        #navbar li a {
-            font-family: 'Yeon Sung', cursive;
-            color: white;
-            text-decoration: none;
-            padding: 12px 12px;
+        #container{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
         }
-
-        #navbar li {
-            list-style: none;
-            margin: 20px 20px;
+        #reach{
+            border-top: solid 4px black;
+            width: 90%;
+            margin: auto;
         }
-
-        #navbar li:hover {
-            text-decoration: underline;
-            background-color: orange;
-            border-radius: 24px;
-
+        #contact{
+            justify-content: space-evenly;
         }
-
-        #foot {
-            font-family: 'Ubuntu', sans-serif;
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 12px 12px;
-            position: fixed;
-            bottom: 0px;
-            width: 100vw;
+        #appoint{
+            width: 70%;
+            margin: auto;
+            margin-bottom: 20px;
         }
-
-        @media screen and (max-width:1270px) {
-
-            /* Navbar Starts here */
-            #navbar {
-                font-size: 2.5rem;
-                height: 120px;
-            }
-
-            #logo img {
-                height: 80px;
-                margin-top: 18px;
-
-            }
-
-            #navbar ul {
-                align-items: center;
-            }
-
-            /* Contact page CSS begins here */
-            #reach {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-
-            h2 {
-                font-size: 2.4rem;
-                margin: 20px auto;
-                text-align: center;
-                margin-top: 80px;
-            }
-
-            form {
-                margin: 30px 40px;
-
-            }
-
-            .icons {
-                font-size: 2.5rem;
-                width: 50vw;
-                margin: 8px 8px;
-                justify-content: left;
-
-            }
-
-            .icons input {
-                margin-left: 20px;
-                width: inherit;
-                font-size: 2rem;
-            }
-
-            .btn {
-                width: 150px;
-                margin-left: 6px;
-            }
-
-
-            .box {
-                height: 200px;
-                margin: 100px 40px;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .box img {
-                width: 30vw;
-
-            }
-
-            #number {
-                border-top: 4px solid black;
-                height: 50vh;
-            }
+        .icons{
+            justify-content:space-evenly;
         }
-    </style>
-</head>
+        .chead{
+            margin: 20px auto;
+        }
+    }
+</style>
 
-<nav id="navbar">
-    <div id="logo"><a href="/timetravel"><img src="../static/img/base/logo.png" alt="logo"></a></div>
-    <ul>
-        <li><a href="/timetravel">Home</a></li>
-        <li><a href="trip.html">Trips</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About</a></li>
-    </ul>
-</nav>
-</body>
-<div id="reach">
-    <div id="contact">
-        <h2>Book an Appointment</h2>
-        <form action="contact.html" method="post" autocomplete="off">
-            <div class="icons">
-                <ion-icon name="person-outline"></ion-icon>
-                <input id="name" name="name" type="text" placeholder="Your Name" required>
-            </div><br>
-            <div class="icons">
-                <ion-icon name="call-outline"></ion-icon>
-                <input id="phone" name="phone" type="phone" placeholder="Your Mobile no." required maxlength="10">
-            </div> <br>
-            <div class="icons">
-                <ion-icon name="mail-outline"></ion-icon>
-                <input id="email" name="email" type="email" placeholder="Your Email" required>
-            </div> <br>
-            <div class="icons">
-                <ion-icon name="compass-outline"></ion-icon>
-                <input id="location" name="location" type="text" placeholder="Enter your destination" required>
-            </div> <br>
-            <button class="btn" type="submit">Sumbit </button><button class="btn" type="reset">Reset</button>
-        </form>
-    </div>
-    <div id="number">
-        <h2 id="head2">Reach Us</h2>
-        <div id="flex2">
-            <div class="box"> <img src="../static/img/contact/phone.png" alt=""><span><strong>Phone:-
-                        +91-1234567890</strong></span></div>
-            <div class="box"> <img src="../static/img/contact/mail.png" alt=""><span><strong>Mail:-
-                        tripwithus@timetravel.com</strong></span></div>
-            <div class="box"> <img src="../static/img/contact/fax.png" alt=""><span><strong>Fax:-
-                        555-123-4567</strong></span></div>
-            <div class="box"> <img src="../static/img/contact/office.png" alt=""><span><strong>Office:- Janakpuri,
-                        Delhi</strong></span></div>
+<body>
+    <nav id="navbar">
+        <div id="logo"><a href="/timetravel"><img src="../static/img/base/logo.png" alt="logo"></a></div>
+        <ul>
+            <li><a href="/timetravel">Home</a></li>
+            <li><a href="trip.html">Trips</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <div id="container">
+        <div id="appoint">
+            <h2>Book your appointment</h2>
+            <form action="contact.html" method="post" autocomplete="off">
+                <div class="icons">
+                    <ion-icon name="person-outline" class="png"></ion-icon>
+                    <input id="name" name="name" type="text" placeholder="Your Name" required>
+                </div><br>
+                <div class="icons">
+                    <ion-icon name="call-outline" class="png"></ion-icon>
+                    <input id="phone" name="phone" type="phone" placeholder="Your Mobile no." required maxlength="10">
+                </div> <br>
+                <div class="icons">
+                    <ion-icon name="mail-outline" class="png"></ion-icon>
+                    <input id="email" name="email" type="email" placeholder="Your Email Address" required>
+                </div> <br>
+                <div class="icons">
+                    <ion-icon name="compass-outline" class="png"></ion-icon>
+                    <input id="location" name="location" type="text" placeholder="Enter your destination" required>
+                </div> <br>
+                <button class="btn" type="submit">Sumbit </button><button class="btn" type="reset">Reset</button>
+            </form>
+        </div>
+        <div id="reach">
+            <h2 class="chead">Reach</h2>
+            <div id="contact">
+                <div class="box"> <img src="../static/img/contact/phone.png" alt=""><span><strong>Phone:-
+                            +91-1234567890</strong></span></div>
+                <div class="box"> <img src="../static/img/contact/mail.png" alt=""><span><strong>Mail:-
+                            tripwithus@timetravel.com</strong></span></div>
+                <div class="box"> <img src="../static/img/contact/fax.png" alt=""><span><strong>Fax:-
+                            555-123-4567</strong></span></div>
+                <div class="box"> <img src="../static/img/contact/office.png" alt=""><span><strong>Office:- Janakpuri,
+                            Delhi</strong></span></div>
+            </div>
         </div>
     </div>
-</div>
-<footer>
-    <div id="foot"> <strong>Copyright © 2022 www.timetravel.com | All rights reserves</strong></div>
-</footer>
+
+    <footer>
+        <div id="foot"> <strong>Copyright © 2022 www.timetravel.com | All rights reserves</strong></div>
+    </footer>
+</body>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-
-<body>
 
 </html>
